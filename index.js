@@ -31,7 +31,7 @@ if (args.help || args.h) {
   process.exit(0)
 }
 
-const logdb  = require("./database.js");
+const logdb  = require("./src/services/database.js");
 const morgan = require("morgan");
 const fs = require("fs");
 app.use(express.urlencoded({ extended: true}));
