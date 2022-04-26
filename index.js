@@ -34,8 +34,10 @@ if (args.help || args.h) {
 const logdb  = require("./src/services/database.js");
 const morgan = require("morgan");
 const fs = require("fs");
+
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+app.use(express.static('./public'));
 
 const server = app.listen(port, () => {
   console.log('App listening on port %PORT%'.replace('%PORT%',port))
