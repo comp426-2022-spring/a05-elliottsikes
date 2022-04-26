@@ -1,4 +1,3 @@
-// Place your server entry point code here
 const express = require('express');
 const app = express();
 
