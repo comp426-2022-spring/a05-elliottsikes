@@ -113,7 +113,7 @@ app.get('/app/flips/:number', (req, res) => {
 app.post('/app/flip/coins/', (req, res, next) => {
   const flips = coinFlips(req.body.number)
   const count = countFlips(flips)
-    res.status(200).json({"raw":flips,"summary":count})
+  res.status(200).json({"raw":flips,"summary":count})
 })
 
 app.get('/app/flip/', (req, res) => {
