@@ -89,7 +89,7 @@ if(args.debug){
 app.get('/app/flip/call/heads', (req, res) => {
     const result = flipACoin('heads');
     res.status(200).json({
-        result
+      result
     })
 });
 
@@ -110,8 +110,8 @@ app.get('/app/flips/:number', (req, res) => {
     const flips = coinFlips(num);
     const results = countFlips(flips);
     res.status(200).json({
-        "raw": flips,
-        "summary": results
+      "raw": flips,
+      "summary": results
     })
 });
 
