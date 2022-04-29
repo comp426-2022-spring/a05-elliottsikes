@@ -72,7 +72,7 @@ if (args.log == 'false') {
   app.use(morgan('combined', { stream: accessLog }))
 }
 
-if(args.debug){
+if(args.debug || args.d){
   app.get("/app/log/access", (req, res) =>{
       try{
           const logs = logdb.prepare('SELECT * FROM accesslog').all();
