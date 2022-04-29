@@ -78,11 +78,11 @@ if(args.debug){
           const logs = logdb.prepare('SELECT * FROM accesslog').all();
           res.status(200).json(logs);
       } catch(e){
-          console.error(e);
+        console.error(e);
       }
   });
   app.get("/app/error", (req, res) => {
-      throw new Error('Error Test Successful');
+    throw new Error('Error Test Successful');
   });
 }
 
@@ -124,7 +124,7 @@ app.post('/app/flip/coins/', (req, res, next) => {
 app.get('/app/flip/', (req, res) => {
     var result = coinFlip();
     res.status(200).json({
-        "flip": result
+      "flip": result
     })
 });
 
