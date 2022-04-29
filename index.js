@@ -100,6 +100,11 @@ app.get('/app/flip/call/tails', (req, res) => {
     })
 });
 
+app.post('/app/flip/call/', (req, res, next) => {
+  const game = flipACoin(req.body.guess)
+  res.status(200).json(game)
+})
+
 app.get('/app/flips/:number', (req, res) => {
     var num = req.params.number;
     const flips = coinFlips(num);
