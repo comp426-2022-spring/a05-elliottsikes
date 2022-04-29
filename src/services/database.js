@@ -21,9 +21,9 @@ if(row==undefined){
             referer VARCHAR,
             useragent VARCHAR
         );
-`
-logdb.exec(logdata);
-console.log("Log database created.");
+    `
+    logdb.exec(logdata);
+    console.log("Log database created.");
 } else {
 	console.log("Log database exists.");
 }
