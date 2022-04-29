@@ -96,7 +96,7 @@ app.get('/app/flip/call/heads', (req, res) => {
 app.get('/app/flip/call/tails', (req, res) => {
     const result = flipACoin('tails');
     res.status(200).json({
-        result
+      result
     })
 });
 
