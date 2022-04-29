@@ -3,6 +3,8 @@ div.hidden {
 }
 
 div.active {
+  padding: auto;
+  margin: auto;
   border: 5px solid red;
 }
 
@@ -12,4 +14,13 @@ img.bigcoin {
 
 img.smallcoin {
   width: 50px;
+}
+
+ul {
+  margin: 0; padding: 0; 
+   list-style-type: none; list-style-image: none;
+}
+li 
+{
+    display:inline;
 }
