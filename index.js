@@ -61,9 +61,15 @@ app.use((req, res, next) => {
   next();
 })
 
-if(args.log==true){
-  const WRITESTREAM = fs.createWriteStream('access.log', { flags: 'a' });
-  app.use(morgan('combined', { stream: WRITESTREAM }));
+if (args.log == 'false') {
+  console.log("NOTICE: not creating file access.log")
+} else {
+  const logdir = './log/';
+  if (!fs.existsSync(logdir)){
+    fs.mkdirSync(logdir);
+  }
+  const accessLog = fs.createWriteStream( logdir+'access.log', { flags: 'a' })
+  app.use(morgan('combined', { stream: accessLog }))
 }
 
 if(args.debug){
