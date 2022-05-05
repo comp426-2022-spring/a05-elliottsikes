@@ -32,17 +32,55 @@
       <button id="multinav">Flip multiple coins</button>
       <button id="guessnav">Guess the result</button>
     </nav>
-    <div id="home">
-      
+    <div id="home" class="active">
+      <h1>Home</h1>
+        <p>
+          <strong>Flip one coin: </strong>
+          flip a coin and see the result</p>
+        <p>
+          <strong>Flip multiple coins: </strong>
+          flip many coins and see the results</p>
+        <p>
+          <strong>Guess the result: </strong>
+          call the coin flip and see if you win or lose</p>
     </div>    
     <div id="single" class="hidden">
-      
+      <h1>Flip a coin</h1>
+        <button id="coin">Flip</button>
+        <p>Result: <span id="result"></span></p>
+        <img src="./assets/img/coin.png" id="quarter" width="50" height="50">
     </div>
     <div id="multi" class="hidden">
-      
+      <h1>Flip many coins</h1>
+			<div id="coins">
+				<label for="number">
+					<strong>How many flips?</strong>
+				</label>
+				<input type="number" name="number" id="number">
+				<input type="submit" id="submitButton" value="Flip 'em!">
+			</div>
+
+			<h2>Results</h2>
+				<p id="heads"></p>
+				<p id="tails"></p>
+				<ul id="resultList"></ul>      
     </div>
     <div id="guess" class="hidden">
-      
+      <h1>Guess the result</h1>
+
+      <button id="tailsCall">Tails</button>
+        <button id="headsCall">Heads</button>
+
+        <h2>Results</h2>
+          <p>Call:
+            <img src="./assets/img/coin.png" id="callResult" width="50" height="50"> </img>
+          </p>
+          <p>Flip:
+            <img src="./assets/img/coin.png" id ="flipResult" width="50" height="50"> </img>
+          </p>
+          <p>Result:
+            <strong id="winOrLose"></strong>
+          </p>      
     </div>
 	<script src="main.js"></script>
   </body>
